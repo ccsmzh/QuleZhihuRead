@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Qule知乎阅读</string>
+    <string name="author_weibo_url">http://weibo.com/mygino</string>
+    <string name="menu_settings">设置</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="pref_title_author_weibo">\@GinO_卓泓</string>
+    <string name="pref_summary_author_weibo">访问作者新浪微博</string>
+    <string name="pref_key_author_weibo">pref_key_author_weibo</string>
+    <string name="pref_title_version">当前版本</string>
+    <string name="pref_key_version">pref_key_version</string>
+    <string name="pref_title_fedback">意见反馈</string>
+    <string name="pref_key_fedback">pref_key_fedback</string>
+
+</resources>
