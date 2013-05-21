@@ -4,6 +4,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.List;
 
+import android.annotation.SuppressLint;
 import qule.gino.zhihuread.BuildConfig;
 import qule.gino.zhihuread.R;
 import qule.gino.zhihuread.http.HttpManger;
@@ -152,6 +153,11 @@ public class MainActivity extends BaseActivity implements LoaderCallbacks<List<H
 			}
 			HttpManger httpManger = new HttpManger();
 			byte[] results = httpManger.httpGet("http://www.zhihu.com/reader/json/" + ++mCurrentItem);
+
+            if(results == null || results.length == 0){
+                return null;
+            }
+
 			try {
 				ReadResponseMsg respMsg = new ReadResponseMsg();
 				respMsg.deserialize(new String(results, "UTF-8"));
@@ -173,7 +179,8 @@ public class MainActivity extends BaseActivity implements LoaderCallbacks<List<H
 		mRefreshItem.setActionView(refreshView);
 	}
 
-	private void showProgress(boolean isShow, boolean isHide) {
+	@SuppressLint("NewApi")
+    private void showProgress(boolean isShow, boolean isHide) {
 		int mShortAnimationDuration = getResources().getInteger(android.R.integer.config_shortAnimTime);
 
 		final View showView = isShow ? mLoadingProgressBar : mContentListView;
