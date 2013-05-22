@@ -5,7 +5,7 @@
     android:background="@color/list_background_color"
     tools:context=".MainActivity" >
 
-    <ListView
+    <qule.gino.zhihuread.ui.widget.RefreshListView
         android:id="@+id/m_lv_contesnt"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -19,7 +19,7 @@
         android:dividerHeight="16.0dip"
         android:fadingEdge="none"
         android:padding="8.0dip" >
-    </ListView>
+    </qule.gino.zhihuread.ui.widget.RefreshListView>
 
     <ProgressBar
         android:id="@+id/m_pb_loading"
